@@ -15,9 +15,9 @@ spring:
 spring:
   r2dbc:
     show-sql: true
-    url: r2dbc:pool:mysql://localhost:3306/mcmovies
-    username: ${DB_USER:camilo}
-    password: ${DB_PASSWORD:Yo5817282/}
+    url: r2dbc:pool:mysql://localhost:3306/maindatabase
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:123456}
 ---
 # Logging
 logging:

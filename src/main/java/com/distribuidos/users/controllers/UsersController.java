@@ -16,7 +16,7 @@ public class UsersController {
     private final UserService service;
 
     @PostMapping()
-    public Mono<ResponseEntity<ResponseBody<Boolean>>> createUser(
+    public Mono<ResponseEntity<ResponseBody<UserEntity>>> createUser(
             @RequestBody UserEntity user) {
 
         return service.createUser(user)

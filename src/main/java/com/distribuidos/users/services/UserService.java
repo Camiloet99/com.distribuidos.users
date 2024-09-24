@@ -20,9 +20,9 @@ public class UserService {
                 .defaultIfEmpty(UserEntity.builder().build());
     }
 
-    public Mono<Boolean> createUser(UserEntity user) {
+    public Mono<UserEntity> createUser(UserEntity user) {
         return userRepository.save(user)
-                .map(createdUser -> true);
+                .map(createdUser -> createdUser);
     }
 
 }
