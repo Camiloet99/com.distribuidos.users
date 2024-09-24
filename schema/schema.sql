@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS user_database;
+CREATE DATABASE IF NOT EXISTS maindatabase;
 
 -- Usar la base de datos creada
-USE user_database;
+USE maindatabase;
 
 -- Crear la tabla users con tamaños optimizados para los campos VARCHAR
 CREATE TABLE users (
