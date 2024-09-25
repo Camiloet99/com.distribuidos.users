@@ -23,7 +23,7 @@ public class UsersController {
                 .map(ControllerUtils::created);
     }
 
-    @GetMapping("/{documentId}}")
+    @GetMapping("/{documentId}")
     public Mono<ResponseEntity<ResponseBody<UserEntity>>> getUserByDocumentId(
             @RequestBody Long documentId) {
 
