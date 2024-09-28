@@ -31,4 +31,12 @@ public class UsersController {
                 .map(ControllerUtils::ok);
     }
 
+    @DeleteMapping("/{documentId}")
+    public Mono<ResponseEntity<ResponseBody<UserEntity>>> deleteUserF(
+            @RequestBody Long documentId) {
+
+        return service.deleteUser(documentId)
+                .map(ControllerUtils::ok);
+    }
+
 }
