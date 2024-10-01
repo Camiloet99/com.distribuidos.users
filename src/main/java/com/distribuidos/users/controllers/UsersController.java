@@ -32,7 +32,7 @@ public class UsersController {
     }
 
     @DeleteMapping("/{documentId}")
-    public Mono<ResponseEntity<ResponseBody<UserEntity>>> deleteUserF(
+    public Mono<ResponseEntity<ResponseBody<Boolean>>> deleteUserF(
             @RequestBody Long documentId) {
 
         return service.deleteUser(documentId)
