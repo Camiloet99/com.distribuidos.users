@@ -25,7 +25,7 @@ public class UsersController {
 
     @GetMapping("/{documentId}")
     public Mono<ResponseEntity<ResponseBody<UserEntity>>> getUserByDocumentId(
-            @RequestBody Long documentId) {
+            @PathVariable Long documentId) {
 
         return service.getUserByDocumentId(documentId)
                 .map(ControllerUtils::ok);
@@ -33,7 +33,7 @@ public class UsersController {
 
     @DeleteMapping("/{documentId}")
     public Mono<ResponseEntity<ResponseBody<Boolean>>> deleteUserF(
-            @RequestBody Long documentId) {
+            @PathVariable Long documentId) {
 
         return service.deleteUser(documentId)
                 .map(ControllerUtils::ok);
