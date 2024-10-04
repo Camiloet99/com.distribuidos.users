@@ -58,6 +58,9 @@ public class EnvironmentConfig {
         @NotBlank
         private String notificationsDomain;
 
+        @NotBlank
+        private String documentsDomain;
+
     }
 
 }

@@ -3,12 +3,14 @@
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/Application.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/config/EnvironmentConfig.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/controllers/ControllerUtils.java
-/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/facades/centarlizer/CentralizerFacade.java
-/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/facades/centarlizer/models/UnregisterCitizenRequest.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/exceptions/ErrorCodes.java
+/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/facades/documents/DocumentsFacade.java
+/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/facades/centralizer/models/UnregisterCitizenRequest.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/controllers/UsersController.java
+/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/facades/centralizer/CentralizerFacade.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/services/UserService.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/exceptions/UnregisterCitizenException.java
+/Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/exceptions/DocumentsUpstreamFailure.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/exceptions/GlobalExceptionHandler.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/entities/UserEntity.java
 /Users/camilo.echeverri/Desktop/maestria/distribuidos/com.distribuidos.users/src/main/java/com/distribuidos/users/models/ResponseBody.java

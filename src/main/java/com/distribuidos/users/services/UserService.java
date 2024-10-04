@@ -2,7 +2,8 @@ package com.distribuidos.users.services;
 
 import com.distribuidos.users.entities.UserEntity;
 import com.distribuidos.users.repositories.UserRepository;
-import com.distribuidos.users.services.facades.centarlizer.CentralizerFacade;
+import com.distribuidos.users.services.facades.centralizer.CentralizerFacade;
+import com.distribuidos.users.services.facades.documents.DocumentsFacade;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final CentralizerFacade centralizerFacade;
+    private final DocumentsFacade documentsFacade;
 
     public Mono<UserEntity> getUserByDocumentId(Long documentId) {
 
@@ -35,9 +37,12 @@ public class UserService {
 
         log.info("Deleting user " + documentId.toString());
 
-        return centralizerFacade.unregisterCitizen(documentId)
-                .flatMap(confirmationResponse -> userRepository.deleteById(documentId)
-                        .map(ignore -> true));
+        Mono<Boolean> unregisterMono = centralizerFacade.unregisterCitizen(documentId);
+        Mono<Void> deleteUserMono = userRepository.deleteById(documentId);
+        Mono<Boolean> documentsMono = documentsFacade.removeUserDocuments(String.valueOf(documentId));
+
+        return Mono.zip(unregisterMono, deleteUserMono, documentsMono)
+                .map(data -> true);
     }
 
 }
